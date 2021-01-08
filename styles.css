@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.container {
+  padding-left: 100px;
+  overflow: hidden;
+}
+
+.nav {
+  padding: 40px 0;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__details {
+  flex-basis: 40%;
+  margin-top: 50px;
+}
+
+.main__heading {
+  font-size: 50px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  margin-bottom: 30px;
+}
+.main__heading-colored {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+
+.main__paragraph {
+  color: hsl(0, 36%, 70%);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 40px;
+}
+.form__input {
+  width: 25rem;
+  font-family: inherit;
+  padding: 15px 30px;
+  border-radius: 100px;
+  border: 1px solid hsl(0, 36%, 70%);
+  font-size: 16px;
+  outline: none;
+}
+.form__input::placeholder {
+  color: hsl(0, 74%, 74%);
+  opacity: 0.8;
+}
+.preText {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  position: relative;
+  left: 0em;
+  font-weight: bolder;
+}
+
+.fas {
+  position: relative;
+  left: -9rem;
+  font-size: 25px;
+}
+.validateIcons {
+  position: relative;
+  left: 23%;
+  top: 0.5em;
+}
+
+.invalidBtn {
+  background-color: #000000;
+}
+
+input:invalid:focus {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+
+.form__btn {
+  border: none;
+  border-radius: 100px;
+  align-self: stretch;
+  padding: 1em;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  height: 100%;
+  width: 20%;
+  right: 0;
+  transition: all 0.2s;
+  outline: none;
+  cursor: pointer;
+}
+.form__btn:hover {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+.emailSe {
+  margin-top: 2em;
+  position: relative;
+  left: 3em;
+}
+
+.main__img-container {
+  flex-basis: 50%;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+.main__img {
+  width: 100%;
+  transform: translateY(-120px);
+  height: calc(100% + 120px);
+}
+.main__details-img {
+  width: calc(100% + 60px);
+  margin-left: -30px;
+  margin-bottom: 50px;
+  display: none;
+}
+
+@media (max-width: 1070px) {
+  .container {
+    padding-left: 50px;
+    overflow: hidden;
+  }
+  .main__img-container {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 800px) {
+  body {
+    overflow: scroll;
+  }
+  .main__heading {
+    position: relative;
+    right: 15%;
+  }
+  .main__paragraph {
+    position: relative;
+    right: 3%;
+    width: 70%;
+  }
+  .main__img-container {
+    display: none;
+  }
+  .main__details {
+    flex-basis: 100%;
+    margin-top: 0;
+    text-align: center;
+  }
+  .main__details-img {
+    display: block;
+  }
+  .container {
+    padding: 0 30px;
+  }
+  .form__btn {
+    padding: 0 30px;
+  }
+}
